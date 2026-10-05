@@ -1,8 +1,7 @@
-# 🛡️ injection-guard
+# injection-guard
+Industrial WAF middleware for Python. Stops OS command injection attacks.
 
-Industrial WAF middleware that blocks OS command injection in 2 lines.
-
-Stops attacks like:
+Blocks attacks like:
 - `; ls -la`
 - `&& cat /etc/passwd`
 - `| whoami`
@@ -11,3 +10,20 @@ Stops attacks like:
 ## Install
 ```bash
 pip install git+https://github.com/TiyaniEno/injection-guard.git
+```
+
+## 💼 Enterprise & Support
+
+**Free for personal use & learning.**
+
+For companies using in production:
+
+| Plan | Price | What you get |
+|------|-------|--------------|
+| Free | R0 | Basic WAF |
+| Starter | R750 once | Help installing + 30 min call |
+| Business | R2500/mo | Custom rules + WhatsApp support |
+| Enterprise | R15000 once | Full security audit |
+
+📩 Contact: 0603905375
+❤️ Sponsor button at top of page!
