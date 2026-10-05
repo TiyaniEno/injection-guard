@@ -8,9 +8,9 @@ Blocks attacks like:
 - `$(id)`
 
 ## Install
+
 ```bash
-pip install git+https://github.com/TiyaniEno/injection-guard.git
-```
+pip install injection-guard-waf 
 
 ## 💼 Enterprise & Support
 
