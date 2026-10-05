@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="injection-guard",
+    name="injection-guard-waf",
     version="1.0.0",
     description="Industrial WAF middleware that blocks OS command injection in 2 lines",
     long_description=open("README.md").read(),
