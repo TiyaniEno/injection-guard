@@ -10,7 +10,9 @@ Blocks attacks like:
 ## Install
 
 ```bash
-pip install injection-guard-waf 
+pip install injection-guard-waf
+```
+
 
 ## 💼 Enterprise & Support
 
