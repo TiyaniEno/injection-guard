@@ -1,31 +1,32 @@
-# injection-guard
-Industrial WAF middleware for Python. Stops OS command injection attacks.
+# injection-guard-waf
 
-Blocks attacks like:
-- `; ls -la`
-- `&& cat /etc/passwd`
-- `| whoami`
-- `$(id)`
+Lightweight WAF middleware for Python. First line of defense against OS command injection.
 
-## Install
+Stops basic payloads like `; ls -la`, `| cat /etc/passwd`, `$()`, `../`
 
-```bash
+### Install
 pip install injection-guard-waf
-```
 
+### Use (Flask example)
+from flask import Flask
+from middleware import InjectionGuardMiddleware
 
-## 💼 Enterprise & Support
+app = Flask(__name__)
+app.wsgi_app = InjectionGuardMiddleware(app.wsgi_app)
 
-**Free for personal use & learning.**
+### What it does and doesn't do
+- ✅ Blocks common injection chars: ; | & $ ` () {} ../ %0a %3b
+- ✅ Checks URL, querystring and body with unquote
+- ⚠️ This is NOT a replacement for proper input validation, allow-lists, or a certified WAF. Use as one layer only.
 
-For companies using in production:
+### 💼 Enterprise & Support
+Free for personal use & learning. MIT License.
 
 | Plan | Price | What you get |
 |------|-------|--------------|
-| Free | R0 | Basic WAF |
+| Free | R0 | Basic WAF middleware (as-is) |
 | Starter | R750 once | Help installing + 30 min call |
-| Business | R2500/mo | Custom rules + WhatsApp support |
-| Enterprise | R15000 once | Full security audit |
+| Business | R2500/mo | Custom rules for your app + WhatsApp support (best-effort) |
+| Enterprise | R15000 once | 4-hour consultation + integration guidance + review of your usage (Not a certified security audit) |
 
-📩 Contact: 0603905375
-❤️ Sponsor button at top of page!
+Contact: via GitHub Issues / Discussions. Sponsor button at top of page.
