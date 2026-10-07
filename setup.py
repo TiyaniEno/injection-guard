@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="injection-guard-waf",
     version="1.0.0",
-    description="Industrial WAF middleware that blocks OS command injection in 2 lines",
+    description="Lightweight WAF middleware to guard against OS command injection - first line of defense",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     author="TiyaniEno",
