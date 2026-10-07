@@ -4,8 +4,17 @@ Lightweight WAF middleware for Python. First line of defense against OS command 
 
 Stops basic payloads like `; ls -la`, `| cat /etc/passwd`, `$()`, `../`
 
+# injection-guard-waf
+
 ### Install
+```bash
 pip install injection-guard-waf
+```
+
+### Use
+```python
+from middleware import InjectionGuardMiddleware
+``` 
 
 ### Use (Flask example)
 from flask import Flask
